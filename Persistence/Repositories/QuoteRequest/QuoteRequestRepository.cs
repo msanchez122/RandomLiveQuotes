@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Persistence.Repositories.QuoteRequest.cs
+namespace Persistence.Repositories.QuoteRequest
 {
     public class QuoteRequestRepository : Repository<Domain.Models.QuoteRequest>, IQuoteRequestRepository
     {
