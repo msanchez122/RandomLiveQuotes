@@ -37,7 +37,7 @@ namespace RandomLiveQuotes.Controllers
         public ActionResult<Quote> getRandomQuestion()
         {
            var quote = _manager.getRandomQuote();
-           return Ok();
+           return Ok(quote);
         }
     }
 }

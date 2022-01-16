@@ -23,7 +23,8 @@ namespace Application.Manager
 
         public Quote getRandomQuote()
         {
-            return new Quote();
+            
+            return _repository.getRandomQuote();
         }
 
     }

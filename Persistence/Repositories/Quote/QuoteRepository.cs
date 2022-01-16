@@ -16,7 +16,7 @@ namespace Persistence.Repositories.Quote
         public Domain.Models.Quote getRandomQuote()
         {
             var idList = _context.Set<Domain.Models.Quote>().Select(x => x.Id).ToList();
-            var id = new Random().Next(idList.Min(), idList.Max());
+            var id = new Random().Next(idList.Min(), idList.Max() + 1);
             return _context.Set<Domain.Models.Quote>().Where(x => x.Id == id).FirstOrDefault();
         }
     }
