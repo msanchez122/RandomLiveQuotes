@@ -25,15 +25,18 @@ namespace RandomLiveQuotes.Controllers
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult<Quote> Create(Quote quote)
         {
+            _manager.create(quote);
             return Ok();
+            
         }
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public ActionResult<Quote> getRandomQuestion()
         {
            var quote = _manager.getRandomQuote();

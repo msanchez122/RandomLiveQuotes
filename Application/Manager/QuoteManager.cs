@@ -18,12 +18,12 @@ namespace Application.Manager
 
         public void create(Quote quote)
         {
-            
+            _repository.Create(quote);
+            context.SaveChanges();   
         }
 
         public Quote getRandomQuote()
         {
-            
             return _repository.getRandomQuote();
         }
 
